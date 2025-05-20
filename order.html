@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="header_box">
+      <div class="container">
+        <div class="header_flex_container">
+          <div class="header_flex">
+            <a href="index.html"><img src="../exam_1/img/logo.png" alt="logo"></a>
+            <nav class="nav header_nav">
+              <label class="nav_link" for="categories">Выберите категорию:</label>
+              <select class="nav_category" id="categories" onchange="openPage(this.value)">
+                <option value=""> </option>
+                <option value="family_game.html">Семейные игры</option>
+                <option value="party_game.html">Игры для вечеринок</option>
+                <option value="card_game.html">Карточные игры</option>
+              </select>
+              <a href="index.html" class="nav_link">Главная</a>
+              <a href="new_game.html" class="nav_link">Новинки</a>
+              <a href="sale.html" class="nav_link">Скидки</a>
+              <a href="prices.html" class="nav_link">Цены</a>
+              <a href="contact.html" class="nav_link">Связаться</a>
+              <a href="order.html" class="nav_link">Заказать</a>
+              <a href="about.html" class="nav_link">О нас</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Контент -->
+  <main class="main">
+    <section class="main_partition">
+      <div class="container">
+        <h2 class="main_title">Оформление <span class="main_section_title_text">заказа</span></h2>
+        <p class="main_text">Выберите игру и заполните форму, чтобы оформить заказ. Мы свяжемся с вами для подтверждения.</p>
+
+        <form action="#" method="post" class="mt-4">
+          <div class="mb-3">
+            <label for="name" class="form-label">Ваше имя</label>
+            <input type="text" class="form-control" id="name" placeholder="Введите имя" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Телефон</label>
+            <input type="tel" class="form-control" id="phone" placeholder="+7..." required>
+          </div>
+
+          <div class="mb-3">
+            <label for="game" class="form-label">Выберите игру (можно несколько)</label>
+            <select id="game" class="form-select" multiple required>
+              <option value="Монополия: Казахстан" data-price="7500">Монополия: Казахстан</option>
+              <option value="UNO Deluxe" data-price="4500">UNO </option>
+              <option value="Диксит" data-price="8900">Dixit</option>
+              <option value="Alias" data-price="5900">Alias</option>
+              <option value="Dead of Winter" data-price="11500">Dead of Winter</option>
+              <option value="Нуар" data-price="3900">Нуар</option>
+              <option value="Мафия" data-price="5300">Mafia</option>
+              <option value="Among Us" data-price="4900">Among Us</option>
+            </select>
+            <small class="text-muted">Зажмите Ctrl (или Cmd на Mac), чтобы выбрать несколько игр</small>
+          </div>
+
+          <div class="mb-4">
+            <p class="fw-bold">Общая стоимость: <span id="total-price">0</span> ₸</p>
+          </div>
+
+          <div class="mb-3">
+            <label for="comment" class="form-label">Комментарий к заказу</label>
+            <textarea id="comment" class="form-control" rows="3" placeholder="Например: доставить вечером или упаковка в подарок"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success">Отправить заказ</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-success">
+          <div class="modal-header">
+            <h5 class="modal-title text-success" id="orderModalLabel">Спасибо за заказ!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Заполняется JS -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Ок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer mt-5">
+    <div class="container text-center">
+      <p class="footer_title">Присоединяйтесь к нашему сообществу — пусть каждый ход будет незабываемым!
+            © 2025 Работа была сделана для показа студентами Крюковой Е. и Ахметовой Д.</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.js"></script>
+  <script>
+    function openPage(url) {
+      if (url) {
+        window.location.href = url;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('form');
+      const gameSelect = document.getElementById('game');
+      const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+      const modalBody = document.querySelector('#orderModal .modal-body');
+      const totalPriceElement = document.getElementById('total-price');
+
+      function updateTotalPrice() {
+        const selected = Array.from(gameSelect.selectedOptions);
+        let total = 0;
+
+        selected.forEach(option => {
+          total += parseInt(option.dataset.price || 0);
+        });
+
+        totalPriceElement.textContent = total;
+        return total;
+      }
+
+      gameSelect.addEventListener('change', updateTotalPrice);
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const selectedGames = Array.from(gameSelect.selectedOptions).map(option => option.value);
+        const gameList = selectedGames.join(', ');
+        const total = updateTotalPrice();
+
+        modalBody.innerHTML = `
+          Ваш заказ успешно отправлен. <br>
+          Вы выбрали: <strong>${gameList}</strong><br>
+          Общая сумма заказа: <strong>${total} ₸</strong><br>
+          Мы свяжемся с вами в ближайшее время!
+        `;
+
+        form.reset();
+        totalPriceElement.textContent = '0';
+        orderModal.show();
+      });
+    });
+  </script>
+</body>
+</html>

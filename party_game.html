@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Игры для вечеринок с друзьями</title>
+</head>
+<body>
+    <header>
+        <div class="header_box">
+            <div class="container">
+                <div class="header_flex_container">
+                    <div class="header_flex">
+                        <a href="index.html"><img src="../exam_1/img/logo.png" alt="logo"></a>
+                        <nav class="nav header_nav">
+                            <label class="nav_link" for="categories">Выберите категорию:</label>
+							<select class="nav_category" id="categories" name="categories" onchange="openPage(this.value)">
+								<option value="index.html"> </option>
+								<option value="family_game.html">Семейные игры</option>
+								<option value="party_game.html">Игры для вечеринок с друзьями</option>
+								<option value="card_game.html">Карточные игры</option>
+							</select>
+                            <a href="index.html" class="nav_link">Главная</a>
+                            <a href="new_game.html" class="nav_link">Новинки</a>
+                            <a href="prices.html" class="nav_link">Цены</a>
+                            <a href="sale.html" class="nav_link">Скидки</a>
+                            <a href="contact.html" class="nav_link">Связаться</a>
+                            <a href="order.html" class="nav_link">Заказать</a>
+                            <a href="about.html" class="nav_link">О нас</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="main_title partition_title">
+                Игры для вечеринок<span class="partition_title_text"> с друзьями</span> 
+            </h2>
+            <div class="partition_flex">
+                <div class="partition_flex_box">
+                    <img src="../exam_1/img/pic-1.jpg" alt="picture-pic-1">
+                    <div class="partition_flex_box_information">
+                        <a href="#" class="partition_flex_box_btn partition_btn_blue" data-bs-toggle="modal" data-bs-target="#gameModal1">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">Monopoly</h3>
+                    </div>
+                </div>
+                <div class="partition_flex_box">
+                    <img src="../exam_1/img/pic-4.jpg" alt="picture-pic-4">
+                    <div class="partition_flex_box_information">
+                        <a href="#" class="partition_flex_box_btn partition_btn_yellow" data-bs-toggle="modal" data-bs-target="#gameModal4">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">UNO</h3>
+                    </div>
+                </div>
+                <div class="partition_flex_box">
+                    <img src="../exam_1/img/pic-5.jpg" alt="picture-pic-5">
+                    <div class="partition_flex_box_information">
+                        <a href="#" class="partition_flex_box_btn partition_btn_green" data-bs-toggle="modal" data-bs-target="#gameModal5">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">Нуар</h3>
+                    </div>
+                </div>
+                <div class="partition_flex_box">
+                    <img src="../exam_1/img/pic-6.jpg" alt="picture-pic-6">
+                    <div class="partition_flex_box_information">
+                        <a href="#" class="partition_flex_box_btn partition_btn_yellow" data-bs-toggle="modal" data-bs-target="#gameModal6">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">Dead of winter</h3>
+                    </div>
+                </div>
+                <div class="partition_flex_box-container partition_flex_box">
+                    <img src="../exam_1/img/pic-7.png" alt="picture-pic-7">
+                    <div class="partition_flex_box_information">
+                        <a href="#" class="partition_flex_box_btn partition_btn_blue" data-bs-toggle="modal" data-bs-target="#gameModal7">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">Mafia</h3>
+                    </div>
+                </div>
+                <div class="partition_flex_box-container partition_flex_box">
+                    <img src="../exam_1/img/pic-8.jpg" alt="picture-pic-8">
+                    <div class="partition_flex_box_information">
+                        <a id="open-modal" href="#" class="partition_flex_box_btn partition_btn_pink" data-bs-toggle="modal" data-bs-target="#gameModal8">Подробная информация</a>
+                        <h3 class="partition_flex_box_title">Among US</h3>
+                    </div>
+                </div>
+            </div>		
+        </div>
+		
+		<div class="modal fade" id="gameModal1" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: Monopoly</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Прежде чем перейти к пунктам о том, с какого возраста можно играть и, собственно, как играть в “Монополию”, давайте посмотрим на базовый набор. Игровые наборы могут отличаться очень сильно в зависимости от варианта игры, собственно, как и методы, как играть в “Монополию”. Но есть определенный классический набор, который мы сейчас вам перечислим.
+						Подробнее : <a href="https://youtu.be/FSHGlHvN7Xo?si=5zFbIY4lccz9WaIY">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="modal fade" id="gameModal4" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: UNO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Начало «УНО» всегда стандартное: кто-то из участников активно перемешивает карты, после чего раздает их компаньонам по настольной игре. В результате этой несложной манипуляции каждый человек получает по 7 карт (ни больше ни меньше). Но вот что за карты на руках, пока никто не знает.
+						Подробнее : <a href="https://youtu.be/6VzWiOi7R4U?si=Wr1ILna6ikUVHKDR">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="modal fade" id="gameModal5" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: Нуар</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Игроки ходят по очереди, выполняя по одному действию. Первый ход каждого игрока несколько отличается от всех последующих, которые всегда будут проходить одинаково. Бандит ходит первым.
+
+Цель бандита: либо убить инспектора, либо убить 14 любых подозреваемых в городе. Бандит побеждает при выполнении хотя бы одного из этих условий.
+Подробнее : <a href="https://youtu.be/T11e27Id1q4?si=BE4RwdrMq9dnvNnB">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="modal fade" id="gameModal6" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: Dead of winter</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>В игре «Мертвый сезон» вы управляете людьми,
+которые выжили после зомби-апокалипсиса,
+основали колонию и теперь борются за существование в условиях суровой зимы
+Подробнее : <a href="https://youtu.be/FUI4MZR6iCU?si=_DgUDSwx2-2oAKgS">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="modal fade" id="gameModal7" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: Mafia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Команды мафии и мирных жителей играют друг против друга. Мирные жители выигрывают, если вычисляют и «отправляют на смерть» всех мафиози.
+						Подробнее : <a href="https://youtu.be/5tj8dxCUjzY?si=VaoXczvJfwRpBAzd">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="modal fade" id="gameModal8" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Правила игры: Among US</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Стандартный игровой режим или Классика (англ. Classic) ― это первый и основной вариант геймплея в игре Among Us и единственный ― в Among Us VR. Один или несколько игроков в начале матча получают роль предателя, который должен любым способом устранить всех остальных астронавтов
+						Подробнее : <a href="https://www.youtube.com/watch?v=RhKILz6d4tQ">Кликай по ссылке!</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h4 class="footer_title">Присоединяйтесь к нашему сообществу — пусть каждый ход будет незабываемым!
+            © 2025 Работа была сделана для показа студентами Крюковой Е. и Ахметовой Д.</h4>
+        </div>
+    </footer>
+	
+    <script src="js/bootstrap.js"></script>
+	
+	<script>
+        function openPage(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+	
+</body>
+</html>

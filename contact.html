@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <title>Связаться — Интернет-магазин настольных игр</title>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="header_box">
+      <div class="container">
+        <div class="header_flex_container">
+          <div class="header_flex">
+            <a href="index.html">
+              <img src="../exam_1/img/logo.png" alt="logo">
+            </a>
+            <nav class="nav header_nav">
+              <label class="nav_link" for="categories">Выберите категорию:</label>
+              <select class="nav_category" id="categories" onchange="openPage(this.value)">
+                <option value="index.html"> </option>
+                <option value="family_game.html">Семейные игры</option>
+                <option value="party_game.html">Игры для вечеринок</option>
+                <option value="card_game.html">Карточные игры</option>
+              </select>
+              <a href="index.html" class="nav_link">Главная</a>
+              <a href="new_game.html" class="nav_link">Новинки</a>
+              <a href="prices.html" class="nav_link">Цены</a>
+              <a href="sale.html" class="nav_link">Скидки</a>
+              <a href="contact.html" class="nav_link">Связаться</a>
+              <a href="order.html" class="nav_link">Заказать</a>
+              <a href="about.html" class="nav_link">О нас</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Контент -->
+  <main class="main">
+    <section class="main_partition">
+      <h2 class="main_title">Контактная информация</h2>
+      <p class="main_text">
+        Если у вас возникли вопросы или предложения, пожалуйста, свяжитесь с нами:
+      </p>
+
+      <div class="main_text-container text-start">
+        <ul class="main_text list-unstyled">
+          <li><strong>Телефоны:</strong> 8 (708) 832-68-92, 8 (708) 773-84-61</li>
+          <li><strong>Email:</strong> yelena.kryukova@narxoz.kz, d.akhmetova@narxoz.kz</li>
+        </ul>
+
+        <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 mt-3">
+          <a href="https://wa.me/+77088326892?text=Здравствуйте%2C%20хотел%20бы%20заказать%20настольную%20игру" 
+             class="btn btn-success" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp: 8 (708) 832-68-92
+          </a>
+          <a href="https://wa.me/+77087738461?text=Здравствуйте%2C%20хотел%20бы%20заказать%20настольную%20игру" 
+             class="btn btn-success" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp: 8 (708) 773-84-61
+          </a>
+          <a href="https://www.instagram.com/nastolki_kz?igsh=MTIzNG50OGgzYThjYg==" 
+             class="btn btn-danger" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://t.me/Nastolki_Helper_Bot" 
+             class="btn btn-primary" target="_blank">
+            <i class="fab fa-telegram-plane"></i> Telegram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_partition">
+      <h2 class="main_title">Способы доставки</h2>
+      <div class="main_text-container text-start">
+        <ul class="main_text list-unstyled">
+          <li>📦 Курьерская доставка по Алматы — <strong>бесплатно от 10 000₸</strong>, иначе — <strong>1000₸</strong>.</li>
+          <li>📮 Почта Казахстана — <strong>от 1500₸</strong> (зависит от региона).</li>
+          <li>🏬 Самовывоз — бесплатно из нашего офиса (по предварительной договорённости).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main_partition">
+      <h2 class="main_title">Цены на популярные товары</h2>
+      <div class="main_text-container text-start">
+        <ul class="main_text list-unstyled">
+          <li>🎲 *Монополия: Казахстан* — <strong>7500₸</strong></li>
+          <li>🃏 *UNO* — <strong>4500₸</strong></li>
+          <li>👨‍👩‍👧 *Dixit* — <strong>8900₸</strong></li>
+          <li>🧩 *Dead of winter* — <strong>11500₸</strong></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <h4 class="footer_title">Присоединяйтесь к нашему сообществу — пусть каждый ход будет незабываемым!
+            © 2025 Работа была сделана для показа студентами Крюковой Е. и Ахметовой Д.</h4>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.js"></script>
+  <script>
+    function openPage(url) {
+      if (url) {
+        window.location.href = url;
+      }
+    }
+  </script>
+</body>
+</html>
+

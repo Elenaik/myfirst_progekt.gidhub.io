@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Информация о нас</title>
+</head>
+<body>
+    <header>
+        <div class="header_box">
+            <div class="container">
+                <div class="header_flex_container">
+                    <div class="header_flex">
+                        <a href="index.html"><img src="../exam_1/img/logo.png" alt="logo"></a>
+                        <nav class="nav header_nav">
+                            <label class="nav_link" for="categories">Выберите категорию:</label>
+							<select class="nav_category" id="categories" name="categories" onchange="openPage(this.value)">
+								<option value="index.html"> </option>
+								<option value="family_game.html">Семейные игры</option>
+								<option value="party_game.html">Игры для вечеринок с друзьями</option>
+								<option value="card_game.html">Карточные игры</option>
+							</select>
+                            <a href="index.html" class="nav_link">Главная</a>
+                            <a href="new_game.html" class="nav_link">Новинки</a>
+                            <a href="prices.html" class="nav_link">Цены</a>
+                            <a href="sale.html" class="nav_link">Скидки</a>
+                            <a href="contact.html" class="nav_link">Связаться</a>
+                            <a href="order.html" class="nav_link">Заказать</a>
+                            <a href="about.html" class="nav_link">О нас</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="container">
+                <div class="main_partition">
+                    <h2 class="main_partion_title title">
+                        О <span class="main_partion_title_text"> нас</span> 
+                    </h2>
+                    <p class="main_text main_text-container">
+                         <h5 class="text-success fw-bold"> Привет! 👋</h5> 
+Если ты оказался здесь — значит, любишь настолки так же, как и мы (или только собираешься влюбиться — и это тоже круто!).
+
+<p>Мы — команда, у которых настольные игры давно перестали быть просто развлечением. Это наш способ собираться с друзьями, смеяться до слёз, спорить, прокачивать мозги и просто классно проводить время. Мы знаем, как важно найти «ту самую» игру: чтобы затянула, понравилась всем и не пылилась на полке. Поэтому мы отбираем каждую игру с душой — тестируем, играем, спорим, а потом добавляем на сайт только то, что действительно цепляет.</p>
+
+<h5 class="text-success fw-bold">В нашем магазине ты найдёшь:</h5> 
+<p>весёлые игры для шумных компаний, быстрые и простые — для вечеров с друзьями, стратегические баталии для тех, кто любит посложнее, уютные семейные игры, в которые можно играть с родителями или детьми, и даже необычные штуки, о которых ты, возможно, ещё не слышал.</p>
+
+Мы стараемся, чтобы у нас было не просто удобно покупать — а приятно зависнуть, полистать новинки, почитать обзоры и почувствовать: «О, вот это — для меня!».
+<p>Так что добро пожаловать! Если у тебя будет вопрос, мы всегда на связи — поможем, подскажем, посоветуем. А ещё будем рады просто поболтать о любимых играх 💬🎲</p>
+
+<h5 class="text-success fw-bold">Заходи, выбирай, играй.</h5>
+<p>Настолки — это не просто игры. Это люди, моменты, эмоции. И мы счастливы быть частью этой магии.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+		
+   
+    </main>
+    <footer style="margin-top: 21%" class="footer">
+        <div class="container">
+            <h4 class="footer_title">Присоединяйтесь к нашему сообществу — пусть каждый ход будет незабываемым!
+            © 2025 Работа была сделана для показа студентами Крюковой Е. и Ахметовой Д.</h4>
+        </div>
+    </footer>
+	
+    <script src="js/bootstrap.js"></script>
+	
+	<script>
+        function openPage(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
